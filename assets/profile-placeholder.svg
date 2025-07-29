@@ -1,0 +1,88 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle with Shadow -->
+  <circle cx="150" cy="155" r="140" fill="url(#shadowGradient)" />
+  
+  <!-- Main Profile Circle -->
+  <circle cx="150" cy="150" r="135" fill="url(#profileGradient)" />
+  
+  <!-- Inner Design Elements -->
+  <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <circle cx="150" cy="150" r="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  
+  <!-- Professional Icon Elements -->
+  <!-- Shield Icon (Cybersecurity Symbol) -->
+  <g transform="translate(120, 100)">
+    <path d="M30 10 L30 35 C30 45 20 55 10 55 C40 55 50 45 50 35 L50 10 Z" 
+          fill="rgba(255,255,255,0.9)" 
+          stroke="rgba(255,255,255,0.5)" 
+          stroke-width="2"/>
+    
+    <!-- Lock Symbol Inside Shield -->
+    <rect x="22" y="25" width="16" height="20" rx="2" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.8)" 
+          stroke-width="2"/>
+    <path d="M26 25 V20 C26 17 28 15 30 15 C32 15 34 17 34 20 V25" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.8)" 
+          stroke-width="2"/>
+    <circle cx="30" cy="35" r="2" fill="rgba(255,255,255,0.8)"/>
+  </g>
+  
+  <!-- Circuit Board Pattern -->
+  <g opacity="0.3">
+    <!-- Horizontal Lines -->
+    <line x1="50" y1="80" x2="100" y2="80" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <line x1="200" y1="220" x2="250" y2="220" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    
+    <!-- Vertical Lines -->
+    <line x1="80" y1="50" x2="80" y2="100" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <line x1="220" y1="200" x2="220" y2="250" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    
+    <!-- Connection Points -->
+    <circle cx="80" cy="80" r="3" fill="rgba(255,255,255,0.7)"/>
+    <circle cx="220" cy="220" r="3" fill="rgba(255,255,255,0.7)"/>
+    <circle cx="100" cy="80" r="2" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="200" cy="220" r="2" fill="rgba(255,255,255,0.5)"/>
+  </g>
+  
+  <!-- Binary Code Pattern -->
+  <g opacity="0.2" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.6)">
+    <text x="70" y="200" transform="rotate(-15 70 200)">1010</text>
+    <text x="230" y="100" transform="rotate(15 230 100)">1100</text>
+    <text x="60" y="120" transform="rotate(-45 60 120)">0110</text>
+    <text x="240" y="180" transform="rotate(45 240 180)">1001</text>
+  </g>
+  
+  <!-- Network Nodes -->
+  <g opacity="0.4">
+    <!-- Top Left Network -->
+    <circle cx="90" cy="90" r="2" fill="rgba(255,255,255,0.8)"/>
+    <circle cx="110" cy="110" r="2" fill="rgba(255,255,255,0.8)"/>
+    <line x1="90" y1="90" x2="110" y2="110" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
+    
+    <!-- Bottom Right Network -->
+    <circle cx="210" cy="210" r="2" fill="rgba(255,255,255,0.8)"/>
+    <circle cx="190" cy="190" r="2" fill="rgba(255,255,255,0.8)"/>
+    <line x1="210" y1="210" x2="190" y2="190" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
+  </g>
+  
+  <!-- Professional Initials -->
+  <text x="150" y="205" text-anchor="middle" font-family="Poppins, sans-serif" 
+        font-size="24" font-weight="600" fill="rgba(255,255,255,0.9)">AH</text>
+  
+  <!-- Subtle Outer Glow -->
+  <circle cx="150" cy="150" r="147" fill="none" stroke="url(#profileGradient)" 
+          stroke-width="1" opacity="0.5"/>
+</svg>

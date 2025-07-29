@@ -2,101 +2,798 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akram Hossain - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Akram Hossain - Cybersecurity Professional</title>
     
-
-
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <h1>Akram Hossain</h1>
-        <p class="typing-effect">Cyber Security Professional</p>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">🌙</button>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<body data-theme="light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-shield-alt me-2"></i>Akram Hossain
+            </a>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle btn btn-outline-primary d-lg-none me-2" id="themeToggle">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <button class="theme-toggle btn btn-outline-primary ms-2" id="themeToggleDesktop">
+                            <i class="fas fa-moon" id="themeIconDesktop"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section id="about" class="section about">
-        <h2>About Me</h2>
-        <img src="https://via.placeholder.com/200" alt="Akram Hossain">
-        <p>I’m a dedicated Security Analyst with a strong background in protecting company data and systems. I specialize in vulnerability assessments, threat detection, and swift incident response. Passionate about technology, I’m committed to continuous learning and tackling new challenges in the ever-evolving cybersecurity landscape. My experience includes implementing robust security measures and delivering impactful training programs at Sunman Global Express.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3">
+                            Hi, I'm <span class="text-primary">Akram Hossain</span>
+                        </h1>
+                        <h2 class="h3 mb-4">
+                            <span id="typed-text"></span>
+                            <span class="cursor">|</span>
+                        </h2>
+                        <p class="lead mb-4">
+                            Dedicated Security Analyst protecting company data and systems through vulnerability assessments, threat detection, and swift incident response.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            </a>
+                            <a href="#projects" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-code me-2"></i>View Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image text-center">
+                        <div class="profile-container">
+                            <img src="assets/profile-placeholder.svg" alt="Akram Hossain" class="profile-img">
+                            <div class="profile-ring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-link">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
     </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Penetration Testing Campaign</h3>
-                <p>Conducted extensive penetration testing at Sunman Global, identifying and addressing critical vulnerabilities, improving system security by 30%.</p>
-            </div>
-            <div class="project-card">
-                <h3>Cybersecurity Training Program</h3>
-                <p>Developed and delivered staff training at Sunman Global, reducing user-related security incidents by 40%.</p>
-            </div>
-            <div class="project-card">
-                <h3>Security Solutions Implementation</h3>
-                <p>Led the selection and implementation of targeted security solutions, enhancing system efficiency by 25%.</p>
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="30">0</h3>
+                        <p class="stat-label">Security Improvement %</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="40">0</h3>
+                        <p class="stat-label">Incident Reduction %</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="25">0</h3>
+                        <p class="stat-label">Efficiency Boost %</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="6">0</h3>
+                        <p class="stat-label">Certifications</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">JAVA</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">C++</div>
-            <div class="skill-card">Next-Gen Firewalls</div>
-            <div class="skill-card">IBM QRadar</div>
-            <div class="skill-card">Splunk</div>
-            <div class="skill-card">Wireshark</div>
-            <div class="skill-card">NMAP</div>
-            <div class="skill-card">Metasploit</div>
-            <div class="skill-card">Kali Linux</div>
-            <div class="skill-card">Project Management</div>
-            <div class="skill-card">Team Leadership</div>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3 class="mb-4">Passionate Cybersecurity Professional</h3>
+                        <p class="mb-4">
+                            I'm a dedicated Security Analyst with a strong background in protecting company data and systems. 
+                            I specialize in vulnerability assessments, threat detection, and swift incident response.
+                        </p>
+                        <p class="mb-4">
+                            Passionate about technology, I'm committed to continuous learning and tackling new challenges 
+                            in the ever-evolving cybersecurity landscape. My experience includes implementing robust security 
+                            measures and delivering impactful training programs.
+                        </p>
+                        
+                        <!-- Career Timeline -->
+                        <div class="timeline mt-5">
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5>Security Analyst</h5>
+                                    <p class="text-muted">Sunman Global Express - Present</p>
+                                    <small>Implementing security measures and training programs</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-features">
+                        <div class="feature-item mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>Vulnerability Assessment</h5>
+                                <p>Expert in identifying and addressing critical security vulnerabilities</p>
+                            </div>
+                        </div>
+                        <div class="feature-item mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>Threat Detection</h5>
+                                <p>Advanced threat detection and monitoring using industry-leading tools</p>
+                            </div>
+                        </div>
+                        <div class="feature-item mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>Incident Response</h5>
+                                <p>Swift and effective incident response to minimize security impacts</p>
+                            </div>
+                        </div>
+                        <div class="feature-item mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>Security Training</h5>
+                                <p>Developing comprehensive training programs to enhance security awareness</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="hobbies" class="section">
-        <h2>Hobbies</h2>
-        <p>When I'm not securing systems, I enjoy exploring new technologies, participating in hackathons, and coding personal projects. I also love hiking, photography, and keeping up with the latest advancements in cybersecurity.</p>
-    </section>
-
-    <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <div class="certifications-grid">
-            <div class="certification-card">CompTIA CySA+, 2024</div>
-            <div class="certification-card">Certified Ethical Hacker (CEH), 2023</div>
-            <div class="certification-card">Data Structures & Algorithms in Java, 2020</div>
-            <div class="certification-card">Git Essential, 2020</div>
-            <div class="certification-card">Java Programmer, 2020</div>
-            <div class="certification-card">Linux, Cisco Academy, 2019</div>
-            <div class="certification-card">CISSP, In Progress</div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-subtitle">Technical proficiencies and tools I work with</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Programming Languages -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skills-category">
+                        <h4 class="mb-4"><i class="fas fa-code me-2"></i>Programming Languages</h4>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Java</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>C++</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Security Tools -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skills-category">
+                        <h4 class="mb-4"><i class="fas fa-shield-alt me-2"></i>Security Tools</h4>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>IBM QRadar</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Splunk</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Wireshark</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Penetration Testing -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-category">
+                        <h4 class="mb-4"><i class="fas fa-bug me-2"></i>Penetration Testing</h4>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Metasploit</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>NMAP</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Kali Linux</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Management -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skills-category">
+                        <h4 class="mb-4"><i class="fas fa-users me-2"></i>Leadership & Management</h4>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Project Management</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Team Leadership</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Next-Gen Firewalls</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p class="contact-links">
-            Phone: 316-226-6969 |
-            Email: <a href="mailto:akram.hossain.nyc@gmail.com">akram.hossain.nyc@gmail.com</a> |
-            <a href="https://www.linkedin.com/in/akram-hossain" target="_blank">LinkedIn</a>
-        </p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Key achievements and implementations</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card h-100">
+                        <div class="project-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <div class="project-content">
+                            <h5>Penetration Testing Campaign</h5>
+                            <p>Conducted extensive penetration testing at Sunman Global, identifying and addressing critical vulnerabilities.</p>
+                            <div class="project-stats">
+                                <span class="badge bg-success">30% Security Improvement</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card h-100">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-content">
+                            <h5>Cybersecurity Training Program</h5>
+                            <p>Developed and delivered comprehensive staff training programs to enhance security awareness.</p>
+                            <div class="project-stats">
+                                <span class="badge bg-success">40% Incident Reduction</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card h-100">
+                        <div class="project-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="project-content">
+                            <h5>Security Solutions Implementation</h5>
+                            <p>Led the selection and implementation of targeted security solutions for enhanced system efficiency.</p>
+                            <div class="project-stats">
+                                <span class="badge bg-success">25% Efficiency Boost</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <p class="section-subtitle">Professional credentials and continuous learning</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certification-card current">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>CompTIA CySA+</h5>
+                            <p class="cert-year">2024</p>
+                            <span class="cert-status badge bg-success">Current</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-card current">
+                        <div class="cert-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>Certified Ethical Hacker (CEH)</h5>
+                            <p class="cert-year">2023</p>
+                            <span class="cert-status badge bg-success">Current</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>Data Structures & Algorithms in Java</h5>
+                            <p class="cert-year">2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>Git Essential</h5>
+                            <p class="cert-year">2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>Java Programmer</h5>
+                            <p class="cert-year">2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h5>Linux - Cisco Academy</h5>
+                            <p class="cert-year">2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- In Progress -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div class="in-progress-cert" data-aos="fade-up">
+                        <h4 class="mb-3">Currently Pursuing</h4>
+                        <div class="cert-progress-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h5>CISSP</h5>
+                                <p>Certified Information Systems Security Professional</p>
+                                <span class="cert-status badge bg-warning">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's discuss cybersecurity opportunities</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="row">
+                        <!-- Contact Info -->
+                        <div class="col-lg-4 mb-4" data-aos="fade-right">
+                            <div class="contact-info">
+                                <div class="contact-item mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>Phone</h6>
+                                        <p><a href="tel:316-226-6969">316-226-6969</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>Email</h6>
+                                        <p><a href="mailto:akram.hossain.nyc@gmail.com">akram.hossain.nyc@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>LinkedIn</h6>
+                                        <p><a href="https://www.linkedin.com/in/akram-hossain" target="_blank">akram-hossain</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <div class="col-lg-8" data-aos="fade-left">
+                            <form id="contactForm" class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                                
+                                <div id="formMessage" class="form-message mt-3"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Akram Hossain. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/akram-hossain" target="_blank" class="social-link me-3">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:akram.hossain.nyc@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <!-- Project Modal 1 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Penetration Testing Campaign</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-details">
+                        <h6>Project Overview</h6>
+                        <p>Conducted comprehensive penetration testing at Sunman Global Express to identify and address critical vulnerabilities in the company's security infrastructure.</p>
+                        
+                        <h6 class="mt-4">Key Achievements</h6>
+                        <ul>
+                            <li>Identified 25+ critical security vulnerabilities</li>
+                            <li>Improved overall system security by 30%</li>
+                            <li>Implemented remediation strategies for all findings</li>
+                            <li>Reduced potential attack vectors by 60%</li>
+                        </ul>
+                        
+                        <h6 class="mt-4">Technologies Used</h6>
+                        <div class="tech-tags">
+                            <span class="badge bg-secondary me-2">Metasploit</span>
+                            <span class="badge bg-secondary me-2">NMAP</span>
+                            <span class="badge bg-secondary me-2">Kali Linux</span>
+                            <span class="badge bg-secondary me-2">Wireshark</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 2 -->
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cybersecurity Training Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-details">
+                        <h6>Project Overview</h6>
+                        <p>Developed and delivered comprehensive cybersecurity training programs for staff at Sunman Global Express to enhance security awareness and reduce human-related security incidents.</p>
+                        
+                        <h6 class="mt-4">Key Achievements</h6>
+                        <ul>
+                            <li>Trained 150+ employees across multiple departments</li>
+                            <li>Reduced user-related security incidents by 40%</li>
+                            <li>Created interactive training modules and simulations</li>
+                            <li>Established ongoing security awareness campaigns</li>
+                        </ul>
+                        
+                        <h6 class="mt-4">Program Components</h6>
+                        <div class="tech-tags">
+                            <span class="badge bg-secondary me-2">Phishing Awareness</span>
+                            <span class="badge bg-secondary me-2">Password Security</span>
+                            <span class="badge bg-secondary me-2">Social Engineering</span>
+                            <span class="badge bg-secondary me-2">Data Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 3 -->
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Security Solutions Implementation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-details">
+                        <h6>Project Overview</h6>
+                        <p>Led the strategic selection and implementation of advanced security solutions to enhance system efficiency and strengthen overall security posture at Sunman Global Express.</p>
+                        
+                        <h6 class="mt-4">Key Achievements</h6>
+                        <ul>
+                            <li>Enhanced system efficiency by 25%</li>
+                            <li>Implemented next-generation firewall solutions</li>
+                            <li>Integrated SIEM tools for better monitoring</li>
+                            <li>Streamlined security operations workflows</li>
+                        </ul>
+                        
+                        <h6 class="mt-4">Solutions Implemented</h6>
+                        <div class="tech-tags">
+                            <span class="badge bg-secondary me-2">Next-Gen Firewalls</span>
+                            <span class="badge bg-secondary me-2">IBM QRadar</span>
+                            <span class="badge bg-secondary me-2">Splunk</span>
+                            <span class="badge bg-secondary me-2">Security Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
